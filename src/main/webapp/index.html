@@ -34,15 +34,15 @@
             const body = document.getElementById("body").value;
 
             try {
-            	const response = await fetch("/api/email/send", {
-            	    method: "POST",
-            	    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            	    body: new URLSearchParams({
-            	        to: to,
-            	        subject: subject,
-            	        body: body
-            	    }),
-            	});
+                const response = await fetch("/api/email/send", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        to: to,
+                        subject: subject,
+                        body: body
+                    }),
+                });
                 const result = await response.text();
                 document.getElementById("response").innerText = result;
             } catch (error) {

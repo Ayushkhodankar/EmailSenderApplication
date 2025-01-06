@@ -3,10 +3,15 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    width: 50%;
+    width: 90%;
+    max-width: 500px;
     margin: 5% auto;
     background: #ffffff;
     padding: 20px;
@@ -17,6 +22,7 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
 
 form {
@@ -27,12 +33,21 @@ form {
 label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
 }
 
 input, textarea, button {
     margin-bottom: 15px;
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
@@ -41,6 +56,7 @@ button {
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -50,4 +66,35 @@ button:hover {
 p {
     text-align: center;
     color: green;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, textarea, button {
+        padding: 8px;
+    }
 }
